@@ -1,0 +1,14 @@
+/* NewArrivals.css */
+
+.react-slider-custom-item {
+    margin: 10px; /* Adjust the spacing between items */
+  }
+  
+  .card-title {
+    color: black; /* Ensures the title is black */
+  }
+  
+  .card-description {
+    color: black; /* For descriptions if needed */
+  }
+  

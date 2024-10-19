@@ -1,0 +1,20 @@
+.custom-range-slider {
+    height: 18px; /* Adjust the height of the slider track */
+    background-color: grey; /* Set the track background to grey */
+  }
+  
+  /* Style for the slider track */
+  .custom-range-slider .range-slider__track {
+    background-color: grey; /* The grey background */
+    height: 18px; /* Height of the track */
+  }
+  
+  /* Style for the slider thumb (the circle that moves) */
+  .custom-range-slider .range-slider__thumb {
+    background-color: black; /* Set the thumb (moving slider) color to black */
+    width: 14px;  /* Adjust the width of the thumb */
+    height: 14px; /* Adjust the height of the thumb */
+    border-radius: 50%; /* Make it a perfect circle */
+    border: 2px solid white; /* Optional: Add a border around the thumb */
+  }
+  
