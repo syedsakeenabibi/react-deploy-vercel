@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import FavoriteIcon from '../../components/common/FavoriteIcon';
 import { Link } from 'react-router-dom';
 
-const ProductCard = ({ id, title, description, price, discount, rating, brand, thumbnail }) => {
+const ProductCard = ({ id, title, description, price, discount, rating, brand, thumbnail,slug }) => {
   const [isDescriptionVisible, setIsDescriptionVisible] = useState(false); // Hide description initially
 
   const toggleDescription = () => {
@@ -12,7 +12,7 @@ const ProductCard = ({ id, title, description, price, discount, rating, brand, t
   return (
     <div className='flex flex-col p-4 rounded-lg shadow-md overflow-hidden mb-4 w-[250px]'> {/* Adjust container width */}
       {/* Use backticks for template literal to correctly inject the product ID */}
-      <Link to={`/product/${id}`}>
+      <Link to={`/product/${slug}`}>
         <div className='relative overflow-hidden'> {/* Container for image with relative positioning */}
           <img 
             className='h-auto w-full max-h-[250px] object-contain border border-gray-300 cursor-pointer transform transition-transform duration-300 hover:scale-110' // Adjusted to maintain the aspect ratio and fit the full image

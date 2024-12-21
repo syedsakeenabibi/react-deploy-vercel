@@ -12,10 +12,13 @@ const Rating = ({ rating }) => {
 
     const ratingNumber = useMemo(() => {
         const floorRating = Math.floor(validRating);
-        console.log('Floor rating:', floorRating);
-        
-        // Create an array based on the valid rating value
-        return Array(floorRating).fill(); // This should not cause issues
+
+        // If floorRating is a valid number, create an array of that length
+        if (Number.isInteger(floorRating) && floorRating >= 0 && floorRating <= 5) {
+            console.log('Floor rating:', floorRating);
+            return new Array(floorRating).fill(); // Create an array based on the valid rating value
+        }
+        return []; // Fallback to an empty array if the rating is invalid
     }, [validRating]);
 
     return (
